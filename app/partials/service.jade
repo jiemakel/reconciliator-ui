@@ -1,0 +1,74 @@
+h3.ui.top.attached.header Configure Service /{{service}}
+  i.icon.loading(ng-show="loading")
+form.ui.form.attached.segment
+  .field
+    label Name:
+    input.ui.input(ng-model="name")
+  .field
+    label SPARQL Endpoint:
+    input.ui.input(ng-model="endpointURL")
+  .field
+    label Load presets:
+    select.ui.input(ng-model="preset",ng-options="key as key for (key,value) in queries")
+  .field
+    label Reconciliation Query:
+    yasqe.ui.input(data="reconcileQuery")
+  .field
+    label Type Suggestion Query:
+    yasqe.ui.input(data="suggestTypeQuery")
+  .field
+    label Property Suggestion Query:
+    yasqe.ui.input(data="suggestPropertyQuery")
+  .field
+    label Entity Suggestion Query:
+    yasqe.ui.input(data="suggestEntityQuery")
+  .field
+    label Match Threshold
+    input(type="text",ng-model="matchThreshold")
+  .field
+    label Type Filter:
+    input(type="text",ng-model="typeFilter")
+  .field
+    label Property Filter:
+    input(type="text",ng-model="propertyFilter")
+  .field
+    label Entity View URL:
+    input(type="text",ng-model="entityViewURL")
+  .field
+    label Entity Preview URL:
+    input(type="text",ng-model="entityPreviewURL")
+  .field
+    label Entity Preview Height:
+    input(type="text",ng-model="entityPreviewHeight")
+  .field
+    label Entity Preview Width:
+    input(type="text",ng-model="entityPreviewWidth")
+  .field
+    label Type Flyout URL:
+    input(type="text",ng-model="typeFlyoutURL")
+  .field
+    label Type Flyout Height:
+    input(type="text",ng-model="typeFlyoutHeight")
+  .field
+    label Type Flyout Width:
+    input(type="text",ng-model="typeFlyoutWidth")
+  .field
+    label Property Flyout URL:
+    input(type="text",ng-model="propertyFlyoutURL")
+  .field
+    label Property Flyout Height:
+    input(type="text",ng-model="propertyFlyoutHeight")
+  .field
+    label Property Flyout Width:
+    input(type="text",ng-model="propertyFlyoutWidth")
+  .field
+    label Entity Flyout URL:
+    input(type="text",ng-model="entityFlyoutURL")
+  .field
+    label Entity Flyout Height:
+    input(type="text",ng-model="entityFlyoutHeight")
+  .field
+    label Entity Flyout Width:
+    input(type="text",ng-model="entityFlyoutWidth")
+  button.ui.green.button(ng-click="submit()") Submit
+  button.ui.red.button(ng-click="delete()") Delete

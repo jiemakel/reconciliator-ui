@@ -1,0 +1,33 @@
+html(ng-app='app')
+  head
+    // build:css(app) styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='bower_components/angular-toastr/dist/angular-toastr.css')
+    // endbower
+    link(rel='stylesheet', href='bower_components/yasgui-yasqe/dist/yasqe.min.css')
+    link(rel='stylesheet', href='bower_components/semantic-ui/build/packaged/css/semantic.css')
+    // endbuild
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+  body
+    div(ui-view="")
+    // build:js(app) scripts/vendor.js
+    // bower:js
+    script(src='bower_components/jquery/dist/jquery.js')
+    script(src='bower_components/angular/angular.js')
+    script(src='bower_components/angular-ui-router/release/angular-ui-router.js')
+    script(src='bower_components/angular-toastr/dist/angular-toastr.js')
+    script(src='bower_components/semantic-ui/build/packaged/javascript/semantic.js')
+    script(src='bower_components/yasgui-yasqe/dist/yasqe.bundled.min.js')
+    // endbower
+    // endbuild
+    // build:js(.tmp) scripts/main.js
+    script(src="scripts/config.js")
+    script(src="scripts/main-ctrl.js")
+    script(src="scripts/services-ctrl.js")
+    script(src="scripts/service-ctrl.js")
+    script(src="scripts/yasqe-directive.js")
+    // inject:partials
+    // endinject
+    // endbuild

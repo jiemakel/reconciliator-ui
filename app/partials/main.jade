@@ -1,0 +1,9 @@
+.ui.floating.error.message.fade.transition(ng-show="showError",ng-click="showError=false")
+  i.close.icon
+  .header {{errorSource}} returned error {{errorStatus}}:
+  |{{errorMessage}}
+  br
+  |for request:
+  br
+  |{{errorRequest}}
+main(ui-view="")

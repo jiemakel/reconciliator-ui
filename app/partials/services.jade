@@ -1,0 +1,4 @@
+i.icon.loading(ng-show="!services")
+ul
+  li(ng-repeat="(serviceId,serviceName) in services"): a(ui-sref="main.service({service:serviceId})") {{serviceName}}
+  li: form(ng-submit="newService(newServiceId)"): input(type="text",ng-model="newServiceId")
